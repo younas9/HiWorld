@@ -50,7 +50,6 @@ public class Blackjack {
             } else if (input.equals("nej")) {
                 System.out.println("Du har valgt at stoppe med at kaste, og det er dermed nu computerens tur til at kaste");
                 System.out.println();
-                spilSlut = true;
                 break;
             } else {
                 System.out.println("Dit input er ugyldigt. Indtast venligst et gyldigt input (ja/nej)");
@@ -58,7 +57,7 @@ public class Blackjack {
         }
 
 
-        if (!blackjack && spilSlut) {
+        if (!blackjack && !spilSlut) {
             int cterning1 = random.nextInt(6) + 1;
             int cterning2 = random.nextInt(6) + 1;
             int samletComputerSum = cterning1 + cterning2;
